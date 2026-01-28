@@ -1,21 +1,38 @@
-"use client"
+"use client";
 
-import { motion } from 'framer-motion';
-import { 
-  Award, GraduationCap, MapPin, Users, Target, Heart, 
-  Sparkles, ArrowRight, Mail, Instagram, Linkedin
-} from 'lucide-react';
-import AnimatedBackground from '@/components/AnimatedBackground';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import {
+  Award,
+  GraduationCap,
+  MapPin,
+  Users,
+  Target,
+  Heart,
+  Sparkles,
+  ArrowRight,
+  Mail,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function About() {
   const teamMembers = [
-    { name: 'Faculty Coordinator', role: 'Department of Data Science', placeholder: true },
-    { name: 'President', role: 'Data Brigade Association', placeholder: true },
-    { name: 'Vice President', role: 'Data Brigade Association', placeholder: true },
-    { name: 'Secretary', role: 'Data Brigade Association', placeholder: true },
+    {
+      name: "Faculty Coordinator",
+      role: "Department of Data Science",
+      placeholder: true,
+    },
+    { name: "President", role: "Data Brigade Association", placeholder: true },
+    {
+      name: "Vice President",
+      role: "Data Brigade Association",
+      placeholder: true,
+    },
+    { name: "Secretary", role: "Data Brigade Association", placeholder: true },
   ];
 
   return (
@@ -36,8 +53,11 @@ export default function About() {
               Know More About Us
             </div>
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-              About 
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Data Vaganza</span>
+              About
+              <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                {" "}
+                Data Vaganza
+              </span>
             </h1>
           </motion.div>
         </div>
@@ -55,23 +75,35 @@ export default function About() {
               {/* College Logo Placeholder */}
               <div className="w-32 h-32 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mb-8">
                 {/* <span className="text-sm text-slate-400 text-center px-2">College Logo<br/>128x128</span> */}
-                <Image src={"/assets/amc.jpg"} width={100} height={100} className='rounded-lg' alt='American college Logo'/>
+                <Image
+                  src={"/assets/amc.jpg"}
+                  width={100}
+                  height={100}
+                  className="rounded-lg"
+                  alt="American college Logo"
+                />
               </div>
 
               <h2 className="text-3xl font-bold mb-2">THE AMERICAN COLLEGE</h2>
-              <p className="text-cyan-400 font-semibold text-lg mb-4">SATELLITE CAMPUS - CHATRAPATTI</p>
-              
+              <p className="text-cyan-400 font-semibold text-lg mb-4">
+                SATELLITE CAMPUS - CHATRAPATTI
+              </p>
+
               <div className="space-y-2 mb-6 text-slate-400 text-sm">
                 <p>An Autonomous Institution Affiliated to</p>
-                <p className="text-white font-medium">Madurai Kamaraj University</p>
+                <p className="text-white font-medium">
+                  Madurai Kamaraj University
+                </p>
                 <p>Re-Accredited 3rd Cycle by NAAC</p>
               </div>
 
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-linear-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                 <Award className="w-8 h-8 text-yellow-400" />
                 <div>
                   <p className="text-white font-bold text-lg">Grade "A+"</p>
-                  <p className="text-slate-400 text-sm">CGPA: 3.47 on a 4 Point Scale</p>
+                  <p className="text-slate-400 text-sm">
+                    CGPA: 3.47 on a 4 Point Scale
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -88,9 +120,13 @@ export default function About() {
                     <MapPin className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Eco-Friendly Campus</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      Eco-Friendly Campus
+                    </h3>
                     <p className="text-slate-400 text-sm leading-relaxed">
-                      Located via Natham, close to the Village of Chatrapatti, our campus boasts a highly eco-friendly environment with vast rich ecosystem.
+                      Located via Natham, close to the Village of Chatrapatti,
+                      our campus boasts a highly eco-friendly environment with
+                      vast rich ecosystem.
                     </p>
                   </div>
                 </div>
@@ -102,9 +138,13 @@ export default function About() {
                     <GraduationCap className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Advanced Infrastructure</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      Advanced Infrastructure
+                    </h3>
                     <p className="text-slate-400 text-sm leading-relaxed">
-                      The college provides advanced infrastructure of Labs exclusively for Science-related courses and studies with prominent internet facilities.
+                      The college provides advanced infrastructure of Labs
+                      exclusively for Science-related courses and studies with
+                      prominent internet facilities.
                     </p>
                   </div>
                 </div>
@@ -116,9 +156,13 @@ export default function About() {
                     <Target className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Excellence & Growth</h3>
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      Excellence & Growth
+                    </h3>
                     <p className="text-slate-400 text-sm leading-relaxed">
-                      With rapid developments and improvements, the campus provides every available opportunity and service to students, thriving for excellence.
+                      With rapid developments and improvements, the campus
+                      provides every available opportunity and service to
+                      students, thriving for excellence.
                     </p>
                   </div>
                 </div>
@@ -131,7 +175,7 @@ export default function About() {
       {/* Data Brigade Section */}
       <section className="relative z-10 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 p-8 sm:p-12">
+          <div className="rounded-3xl bg-linear-to-r from-cyan-500/10 to-purple-500/10 border border-white/10 p-8 sm:p-12">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <motion.div
@@ -141,28 +185,46 @@ export default function About() {
                 >
                   {/* Brigade Logo Placeholder */}
                   <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-cyan-500/30 to-purple-500/30 border border-cyan-500/40 flex items-center justify-center mb-8">
-                    <span className="text-sm text-cyan-400 text-center px-2">Brigade Logo<br/>128x128</span>
+                    <span className="text-sm text-cyan-400 text-center px-2">
+                      Brigade Logo
+                      <br />
+                      128x128
+                    </span>
                   </div>
 
                   <h2 className="text-3xl font-bold mb-4">
                     Data Brigade
-                    <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Association</span>
+                    <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                      {" "}
+                      Association
+                    </span>
                   </h2>
                   <p className="text-slate-400 leading-relaxed mb-6">
-                    Data Brigade Association is the official student association of the Department of Data Science at The American College, Satellite Campus. We are a community of passionate data enthusiasts dedicated to fostering innovation, learning, and collaboration in the field of Data Science.
+                    Data Brigade Association is the official student association
+                    of the Department of Data Science at The American College,
+                    Satellite Campus. We are a community of passionate data
+                    enthusiasts dedicated to fostering innovation, learning, and
+                    collaboration in the field of Data Science.
                   </p>
                   <p className="text-slate-400 leading-relaxed">
-                    Our mission is to bridge the gap between academic knowledge and industry practices through workshops, hackathons, guest lectures, and events like Data Vaganza - our flagship inter-college symposium.
+                    Our mission is to bridge the gap between academic knowledge
+                    and industry practices through workshops, hackathons, guest
+                    lectures, and events like Data Vaganza - our flagship
+                    inter-college symposium.
                   </p>
                 </motion.div>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { icon: Users, value: '100+', label: 'Active Members' },
-                  { icon: Award, value: '10+', label: 'Events Per Year' },
-                  { icon: GraduationCap, value: '5+', label: 'Workshops Conducted' },
-                  { icon: Heart, value: '1000+', label: 'Students Impacted' },
+                  { icon: Users, value: "100+", label: "Active Members" },
+                  { icon: Award, value: "10+", label: "Events Per Year" },
+                  {
+                    icon: GraduationCap,
+                    value: "5+",
+                    label: "Workshops Conducted",
+                  },
+                  { icon: Heart, value: "1000+", label: "Students Impacted" },
                 ].map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -173,7 +235,9 @@ export default function About() {
                     className="text-center p-6 rounded-xl bg-white/5 border border-white/10"
                   >
                     <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-2xl font-bold text-white mb-1">
+                      {stat.value}
+                    </div>
                     <div className="text-slate-400 text-xs">{stat.label}</div>
                   </motion.div>
                 ))}
@@ -231,7 +295,7 @@ export default function About() {
             <p className="text-slate-400 mb-8">
               Have questions? We'd love to hear from you!
             </p>
-            
+
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
               <a
                 href="mailto:databrigade@americancollege.edu.in"
@@ -264,7 +328,7 @@ export default function About() {
             href="https://forms.google.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
           >
             Register for Data Vaganza 2K26
             <ArrowRight size={20} />

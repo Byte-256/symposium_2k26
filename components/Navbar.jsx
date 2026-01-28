@@ -1,18 +1,18 @@
-"use client"
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { createPageUrl } from '@/utils';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import { createPageUrl } from "@/utils";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', page: 'Home' },
-    { name: 'Events', page: 'Events' },
-    { name: 'Sponsors', page: 'Sponsors' },
-    { name: 'About', page: 'About' },
+    { name: "Home", page: "Home" },
+    { name: "Events", page: "Events" },
+    { name: "Sponsors", page: "Sponsors" },
+    { name: "About", page: "About" },
   ];
 
   return (
@@ -21,12 +21,17 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href={createPageUrl('Home')} className="flex items-center gap-3">
+            <Link
+              href={createPageUrl("Home")}
+              className="flex items-center gap-3"
+            >
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">DV</span>
               </div>
               <div className="hidden sm:block">
-                <p className="text-white font-semibold tracking-tight">Data Vaganza</p>
+                <p className="text-white font-semibold tracking-tight">
+                  Data Vaganza
+                </p>
                 <p className="text-cyan-400 text-xs tracking-widest">2K26</p>
               </div>
             </Link>
@@ -46,7 +51,7 @@ export default function Navbar() {
                 href="https://forms.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-4 px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                className="ml-4 px-6 py-2.5 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Register Now
               </a>
@@ -87,7 +92,7 @@ export default function Navbar() {
                 href="https://forms.google.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mt-4 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-center font-medium rounded-full"
+                className="block mt-4 px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-center font-medium rounded-full"
               >
                 Register Now
               </a>
