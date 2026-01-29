@@ -68,7 +68,7 @@ export default function Home() {
               <div className="w-16 h-16 p-0 sm:w-20 sm:h-20 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
                 {/* <span className="text-xs text-slate-400 text-center px-1">College Logo</span> */}
                 <Image
-                  src="/assets/amc.jpg"
+                  src="/amc.jpg"
                   alt="College Logo"
                   width={64}
                   height={64}

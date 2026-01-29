@@ -76,7 +76,7 @@ export default function About() {
               <div className="w-32 h-32 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mb-8">
                 {/* <span className="text-sm text-slate-400 text-center px-2">College Logo<br/>128x128</span> */}
                 <Image
-                  src={"/assets/amc.jpg"}
+                  src={"/amc.jpg"}
                   width={100}
                   height={100}
                   className="rounded-lg"
