@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { createPageUrl } from "@/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -22,7 +21,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link
-              href={createPageUrl("Home")}
+              href={"Home"}
               className="flex items-center gap-3"
             >
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center">
@@ -41,7 +40,7 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.page}
-                  href={createPageUrl(link.page)}
+                  href={link.page}
                   className="px-4 py-2 text-sm text-slate-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
                 >
                   {link.name}
@@ -81,7 +80,7 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.page}
-                  href={createPageUrl(link.page)}
+                  href={link.page}
                   onClick={() => setIsOpen(false)}
                   className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                 >

@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-import { createPageUrl } from '@/utils';
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export default function Footer() {
@@ -31,7 +30,7 @@ export default function Footer() {
               {['Home', 'Events', 'Sponsors', 'About'].map((page) => (
                 <li key={page}>
                   <Link
-                    href={createPageUrl(page)}
+                    href={page}
                     className="text-slate-400 hover:text-cyan-400 transition-colors text-sm"
                   >
                     {page}

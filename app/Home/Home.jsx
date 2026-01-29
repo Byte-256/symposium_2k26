@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -183,7 +182,7 @@ export default function Home() {
                 />
               </a>
               <Link
-                href={createPageUrl("Events")}
+                href={'Events'}
                 className="px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white font-medium hover:bg-white/10 transition-all duration-300"
               >
                 Explore Events
