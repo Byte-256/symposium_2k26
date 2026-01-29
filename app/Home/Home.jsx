@@ -8,9 +8,7 @@ import {
   Users,
   Sparkles,
   Code2,
-  Database,
   Brain,
-  ChartBar,
   Trophy,
 } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
@@ -44,10 +42,10 @@ export default function Home() {
   ];
 
   const stats = [
-    // { value: "2-5", label: "Team Members" },
-    // { value: "6", label: "Events Running" },
-    // { value: "50+", label: "Expected Teams" },
-    // { value: "3.47/4", label: "NAAC CGPA" },
+    { value: "30+", label: "Colleges Invited" },
+    { value: "5+", label: "Events Running" },
+    { value: "500+", label: "Expected Participants" },
+    { value: "1", label: "Overall Winner" },
   ];
 
   return (
@@ -79,7 +77,7 @@ export default function Home() {
               </div>
               <div className="w-px h-12 bg-white/20" />
               {/* Brigade Logo Placeholder */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-linear-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">
                 <span className="text-xs text-cyan-400 text-center px-1">
                   Brigade Logo
                 </span>
@@ -159,7 +157,12 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="mb-12"
             >
-              <CountdownTimer targetDate="2026-02-13T09:00:00" />
+              <div className="mb-4">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium">
+                  Registration Closes
+                </span>
+              </div>
+              <CountdownTimer targetDate="2026-02-09T20:00:00" />
             </motion.div>
 
             {/* CTAs */}
@@ -170,7 +173,7 @@ export default function Home() {
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
               <a
-                href="https://forms.google.com"
+                href="https://forms.gle/m1GdyZuahE68sDzu9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -182,7 +185,7 @@ export default function Home() {
                 />
               </a>
               <Link
-                href={'Events'}
+                href={"events"}
                 className="px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white font-medium hover:bg-white/10 transition-all duration-300"
               >
                 Explore Events
@@ -234,9 +237,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-cyan-500/30 transition-all duration-300"
+                className="group p-6 rounded-2xl bg-white/2 border border-white/10 hover:border-cyan-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
@@ -294,7 +297,7 @@ export default function Home() {
                 </p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-linear-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                   <span className="text-cyan-400 font-semibold">
-                    NAAC "A+" Grade
+                    NAAC &quot;A+&quot; Grade
                   </span>
                   <span className="text-slate-400">CGPA: 3.47/4</span>
                 </div>
@@ -335,11 +338,11 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Don't miss this opportunity to learn, compete, and connect with
-              fellow data enthusiasts from across the region.
+              Don&apos; miss this opportunity to learn, compete, and connect
+              with fellow data enthusiasts from across the region.
             </p>
             <a
-              href="https://forms.google.com" // [TODO: Update with actual form link]
+              href="https://forms.gle/m1GdyZuahE68sDzu9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"

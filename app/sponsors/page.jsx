@@ -1,16 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Handshake,
-  Mail,
-  Phone,
-  ArrowRight,
-  Building2,
-  Users,
-  Globe,
-  Megaphone,
-} from "lucide-react";
+import { Handshake, Building2, Users, Globe, Megaphone } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,10 +13,7 @@ export default function Sponsors() {
       name: "Bronze",
       price: "5,000",
       color: "bg-amber-600/20 text-amber-400",
-      benefits: [
-        "Promotional banner display",
-        "Stall space for marketing",
-      ],
+      benefits: ["Promotional banner display", "Stall space for marketing"],
     },
     {
       name: "Silver",
@@ -104,7 +92,8 @@ export default function Sponsors() {
               Department of Data Science (UG) - Data Brigade Association
             </p>
             <p className="text-slate-500 text-sm max-w-xl mx-auto">
-              The American College, Satellite Campus, Chatrappatti, Madurai<br/>
+              The American College, Satellite Campus, Chatrappatti, Madurai
+              <br />
               Re-Accredited 3rd Cycle by NAAC with Grade A+ (CGPA: 3.47/4.0)
             </p>
           </motion.div>
@@ -124,10 +113,12 @@ export default function Sponsors() {
               About The American College
             </h2>
             <p className="text-slate-400 text-center max-w-3xl mx-auto leading-relaxed">
-              A rapidly growing institution offering new courses in a highly eco-friendly environment, 
-              located on the Natham route near Chatrappatti village. The campus provides advanced 
-              laboratory infrastructure exclusively for science-related courses, robust internet facilities, 
-              and convenient transportation from Madurai and nearby cities.
+              A rapidly growing institution offering new courses in a highly
+              eco-friendly environment, located on the Natham route near
+              Chatrappatti village. The campus provides advanced laboratory
+              infrastructure exclusively for science-related courses, robust
+              internet facilities, and convenient transportation from Madurai
+              and nearby cities.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -138,9 +129,9 @@ export default function Sponsors() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl bg-white/[0.02] border border-white/10"
+                className="text-center p-6 rounded-2xl bg-white/2 border border-white/10"
               >
-                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mb-4">
+                <div className="w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mb-4">
                   <item.icon className="w-7 h-7 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
@@ -199,8 +190,12 @@ export default function Sponsors() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Head of Department</h3>
-              <p className="text-white font-medium">Dr. A. John Sanjeev Kumar</p>
+              <h3 className="text-lg font-semibold text-cyan-400 mb-4">
+                Head of Department
+              </h3>
+              <p className="text-white font-medium">
+                Dr. A. John Sanjeev Kumar
+              </p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -209,10 +204,17 @@ export default function Sponsors() {
               transition={{ delay: 0.1 }}
               className="text-center"
             >
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Department Faculties</h3>
+              <h3 className="text-lg font-semibold text-cyan-400 mb-4">
+                Department Faculties
+              </h3>
               <div className="space-y-2">
-                <p className="text-white">Dr. D. Gandhimathi</p>
-                <p className="text-white">Mrs. A. Punitha Rosline <span className="text-slate-400 text-sm">(Association President)</span></p>
+                {/* <p className="text-white">Dr. D. Gandhimathi</p>*/}
+                <p className="text-white">
+                  Mrs. A. Punitha Rosline{" "}
+                  <span className="text-slate-400 text-sm">
+                    (Association President)
+                  </span>
+                </p>
                 <p className="text-white">Mrs. B. Seema</p>
               </div>
             </motion.div>
@@ -223,7 +225,9 @@ export default function Sponsors() {
               transition={{ delay: 0.2 }}
               className="text-center"
             >
-              <h3 className="text-lg font-semibold text-cyan-400 mb-4">Student In-Charges</h3>
+              <h3 className="text-lg font-semibold text-cyan-400 mb-4">
+                Student In-Charges
+              </h3>
               <div className="space-y-2">
                 <p className="text-white">Mr. Viswanathan</p>
                 <p className="text-white">Mr. Aaditya</p>
@@ -241,19 +245,24 @@ export default function Sponsors() {
               Contact for Sponsorship
             </h2>
             <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-              For more information regarding sponsorship, get in touch with our team:
+              For more information regarding sponsorship, get in touch with our
+              team:
             </p>
             <div className="space-y-4 max-w-md mx-auto">
               <div className="flex items-center justify-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
                 <div className="text-left">
                   <p className="text-white font-medium">Mr. Viswanathan</p>
-                  <p className="text-cyan-400">73051 42839</p>
+                  <p className="text-cyan-400">
+                    <a href="tel:+917305142839">73051 42839</a>
+                  </p>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
                 <div className="text-left">
                   <p className="text-white font-medium">Mr. Aaditya</p>
-                  <p className="text-cyan-400">97916 56788</p>
+                  <p className="text-cyan-400">
+                    <a href="tel:+919791656788">97916 56788</a>
+                  </p>
                 </div>
               </div>
             </div>

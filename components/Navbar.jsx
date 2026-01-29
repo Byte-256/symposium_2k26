@@ -8,10 +8,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", page: "Home" },
-    { name: "Events", page: "Events" },
-    { name: "Sponsors", page: "Sponsors" },
-    { name: "About", page: "About" },
+    { name: "Home", page: "/" },
+    { name: "Events", page: "/events" },
+    { name: "Sponsors", page: "/sponsors" },
+    { name: "About", page: "/about" },
   ];
 
   return (
@@ -20,10 +20,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link
-              href={"Home"}
-              className="flex items-center gap-3"
-            >
+            <Link href={"Home"} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">DV</span>
               </div>
@@ -47,7 +44,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://forms.google.com"
+                href="https://forms.gle/m1GdyZuahE68sDzu9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-4 px-6 py-2.5 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -88,7 +85,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="https://forms.google.com"
+                href="https://forms.gle/m1GdyZuahE68sDzu9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-4 px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-center font-medium rounded-full"

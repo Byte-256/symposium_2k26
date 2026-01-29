@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Data Vangaza 2k26",
+  title: "Data Vaganza 2k26",
   description: "Inter-College Symposium - Data Brigade",
 };
 

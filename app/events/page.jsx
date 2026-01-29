@@ -2,22 +2,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  Code2,
-  Database,
-  Brain,
   Presentation,
-  Gamepad2,
-  Lightbulb,
   Puzzle,
-  PenTool,
-  Mic,
   Trophy,
   Filter,
   ArrowRight,
   Camera,
   MapPin,
   Bug,
-  Users,
   Music,
 } from "lucide-react";
 import AnimatedBackground from "@/components/AnimatedBackground";
@@ -108,18 +100,17 @@ export default function Events() {
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm mb-6">
-              <Trophy size={16} />
-              18+ Exciting Events
+              <Trophy size={16} />6 Exciting Events
             </div>
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
               Events &
               <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 {" "}
-                Competitions
+                Users, Competitions
               </span>
             </h1>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              From intense coding battles to creative workshops, there's
+              From intense coding battles to creative workshops, there&apos;s
               something for everyone. Showcase your skills and win exciting
               prizes!
             </p>
@@ -179,7 +170,7 @@ export default function Events() {
                 "Certificate of participation for all registered participants",
               ].map((rule, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-cyan-400 text-xs font-bold">
                       {index + 1}
                     </span>
@@ -200,7 +191,7 @@ export default function Events() {
             Register now and secure your spot in these exciting events!
           </p>
           <a
-            href="https://forms.google.com"
+            href="https://forms.gle/m1GdyZuahE68sDzu9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300"

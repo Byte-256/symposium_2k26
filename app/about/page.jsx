@@ -100,7 +100,9 @@ export default function About() {
               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-linear-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
                 <Award className="w-8 h-8 text-yellow-400" />
                 <div>
-                  <p className="text-white font-bold text-lg">Grade "A+"</p>
+                  <p className="text-white font-bold text-lg">
+                    Grade &quot;A+&quot;
+                  </p>
                   <p className="text-slate-400 text-sm">
                     CGPA: 3.47 on a 4 Point Scale
                   </p>
@@ -116,7 +118,7 @@ export default function About() {
             >
               <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
@@ -132,7 +134,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+              <div className="p-6 rounded-2xl bg-white/2 border border-white/10">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
                     <GraduationCap className="w-6 h-6 text-blue-400" />
@@ -184,7 +186,7 @@ export default function About() {
                   viewport={{ once: true }}
                 >
                   {/* Brigade Logo Placeholder */}
-                  <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-cyan-500/30 to-purple-500/30 border border-cyan-500/40 flex items-center justify-center mb-8">
+                  <div className="w-32 h-32 rounded-2xl bg-linear-to-br from-cyan-500/30 to-purple-500/30 border border-cyan-500/40 flex items-center justify-center mb-8">
                     <span className="text-sm text-cyan-400 text-center px-2">
                       Brigade Logo
                       <br />
@@ -293,7 +295,7 @@ export default function About() {
           >
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-slate-400 mb-8">
-              Have questions? We'd love to hear from you!
+              Have questions? We&apos;d love to hear from you!
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
@@ -302,7 +304,7 @@ export default function About() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white hover:bg-white/10 transition-all"
               >
                 <Mail size={18} className="text-cyan-400" />
-                databrigade@americancollege.edu.in
+                23dsc201@americancollege.edu.in
               </a>
             </div>
 
@@ -325,7 +327,7 @@ export default function About() {
       <section className="relative z-10 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <a
-            href="https://forms.google.com"
+            href="https://forms.gle/m1GdyZuahE68sDzu9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
