@@ -24,7 +24,7 @@ export default function Events() {
 
   const events = [
     {
-      title: "Treasure Hunt",
+      title: "Trace & Transform \n Treasure Hunt",
       description:
         "Find QR code clues across campus. All scanned clues must be screenshotted. Running/screaming not allowed. 2-minute penalty for violations.",
       icon: MapPin,
@@ -33,7 +33,7 @@ export default function Events() {
       category: "Non-Technical",
     },
     {
-      title: "Debugging",
+      title: "Heuristic Hunt \n Debugging",
       description:
         "Test your debugging skills in Java & Python. 3 rounds of programming challenges.",
       icon: Bug,
@@ -42,7 +42,7 @@ export default function Events() {
       category: "Technical",
     },
     {
-      title: "Photography",
+      title: "The Golden Ratio \n Photography",
       description:
         "Open theme mobile photography. Capture anything inside campus. Individual participation only. DSLR not allowed.",
       icon: Camera,
@@ -53,7 +53,7 @@ export default function Events() {
         "Submit: Name_Department_Year.jpg to frameparungajii@gmail.com | Contact: 9994118682, 97871 92215",
     },
     {
-      title: "Paper Presentation",
+      title: "The Neural Narrative \n Paper Presentation",
       description:
         "Present original research papers. IEEE format, 6-10 pages, plagiarism below 15%, 10-12 slides, PPT only.",
       icon: Presentation,
@@ -62,7 +62,7 @@ export default function Events() {
       category: "Technical",
     },
     {
-      title: "Connection",
+      title: "Vision Vault \n Connection",
       description:
         "Identify common technical connections between words. 3 rounds with preliminary round. Judges decision final.",
       icon: Puzzle,
@@ -71,7 +71,7 @@ export default function Events() {
       category: "Technical",
     },
     {
-      title: "As You Like It",
+      title: "Fusion Fiesta \n As You Like It",
       description:
         "Dance and mime performance. Submit audio tracks in advance. 5-6 minutes max duration. Appropriate outfits required.",
       icon: Music,

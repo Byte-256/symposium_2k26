@@ -40,7 +40,16 @@ export default function EventCard({ event, index }) {
         </div>
 
         {/* Content */}
-        <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+        <div className="mb-3">
+          <h3 className="text-xl font-semibold text-white mb-1">
+            {title.split('\n')[0]}
+          </h3>
+          {title.includes('\n') && (
+            <p className="text-sm text-slate-500 font-medium">
+              {title.split('\n')[1]}
+            </p>
+          )}
+        </div>
         <p className="text-slate-400 text-sm leading-relaxed mb-6">
           {description}
         </p>
