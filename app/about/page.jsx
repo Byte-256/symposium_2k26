@@ -187,11 +187,13 @@ export default function About() {
                 >
                   {/* Brigade Logo Placeholder */}
                   <div className="w-32 h-32 rounded-2xl bg-linear-to-br from-cyan-500/30 to-purple-500/30 border border-cyan-500/40 flex items-center justify-center mb-8">
-                    <span className="text-sm text-cyan-400 text-center px-2">
-                      Brigade Logo
-                      <br />
-                      128x128
-                    </span>
+                    <Image
+                      src="/brigade.png"
+                      alt="Brigade Association Logo"
+                      width={128}
+                      height={128}
+                      className="object-contain rounded-xl"
+                    />
                   </div>
 
                   <h2 className="text-3xl font-bold mb-4">

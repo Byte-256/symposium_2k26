@@ -44,7 +44,7 @@ export default function Home() {
   const stats = [
     { value: "30+", label: "Colleges Invited" },
     { value: "5+", label: "Events Running" },
-    { value: "500+", label: "Expected Participants" },
+    { value: "100+", label: "Expected Participants" },
     { value: "1", label: "Overall Winner" },
   ];
 
@@ -78,9 +78,16 @@ export default function Home() {
               <div className="w-px h-12 bg-white/20" />
               {/* Brigade Logo Placeholder */}
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-linear-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">
-                <span className="text-xs text-cyan-400 text-center px-1">
+                <Image
+                  src="/brigade.png"
+                  alt="Brigade Association Logo"
+                  width={64}
+                  height={64}
+                  className="object-contain rounded-xl"
+                />
+                {/* <span className="text-xs text-cyan-400 text-center px-1">
                   Brigade Logo
-                </span>
+                </span>*/}
               </div>
             </motion.div>
 
@@ -145,8 +152,8 @@ export default function Home() {
                 <span>Satellite Campus</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
-                <Users size={18} className="text-cyan-400" />
-                <span>Open for All Colleges</span>
+                {/* <Users size={18} className="text-cyan-400" />*/}
+                {/* <span>Open for All Colleges</span>*/}
               </div>
             </motion.div>
 
