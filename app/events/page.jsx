@@ -24,7 +24,7 @@ export default function Events() {
 
   const events = [
     {
-      title: "Trace & Transform \n Treasure Hunt",
+      title: "Heuristic Hunt \n Treasure Hunt",
       description:
         "Find QR code clues across campus. All scanned clues must be screenshotted. Running/screaming not allowed. 2-minute penalty for violations.",
       icon: MapPin,
@@ -33,7 +33,7 @@ export default function Events() {
       category: "Non-Technical",
     },
     {
-      title: "Heuristic Hunt \n Debugging",
+      title: "Trace & Transform \n Debugging",
       description:
         "Test your debugging skills in Java & Python. 3 rounds of programming challenges.",
       icon: Bug,

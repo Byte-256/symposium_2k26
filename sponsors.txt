@@ -1,0 +1,5 @@
+thangamayil -->  /sponsors/thangamayil.webp
+
+gesto       -->  /sponsors/gesto.webp
+pocopanda   -->  /sponsors/pocopanda.webp
+ace         -->  /sponsors/ace.webp

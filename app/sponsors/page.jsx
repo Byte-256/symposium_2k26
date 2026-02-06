@@ -6,6 +6,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SponsorTier from "@/components/SponsorTier";
+import Link from "next/link";
 
 export default function Sponsors() {
   const tiers = [
@@ -61,6 +62,26 @@ export default function Sponsors() {
       icon: Megaphone,
       title: "Recruitment Access",
       desc: "Direct access to skilled candidates for internships and job opportunities.",
+    },
+  ];
+
+  const currentSponsors = [
+    {
+      name: "Thangamayil",
+      logo: "/thangamayil.webp",
+    },
+    {
+      name: "Gesto",
+      logo: "/gesto.webp",
+    },
+    {
+      name: "Pocopanda",
+      logo: "/pocopanda.webp",
+      url: "https://share.google/yHXWUmOilzBJhBoBv"
+    },
+    {
+      name: "Ace",
+      logo: "/ACE.webp",
     },
   ];
 
@@ -139,6 +160,40 @@ export default function Sponsors() {
                 </h3>
                 <p className="text-slate-400 text-sm">{item.desc}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Current Sponsors */}
+      <section className="relative z-10 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl sm:text-3xl font-bold text-center mb-12"
+          >
+            Our Sponsors
+          </motion.h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {currentSponsors.map((sponsor, index) => (
+              <Link key={sponsor.name} href={sponsor.url || "#"} target="_blank" rel="noopener noreferrer">
+                <motion.div
+                  key={sponsor.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                >
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="max-h-20 w-auto object-contain filter"
+                  />
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
