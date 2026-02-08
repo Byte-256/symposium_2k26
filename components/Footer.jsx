@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Bus, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -55,6 +55,31 @@ export default function Footer() {
               <li className="flex items-center gap-3 text-slate-400 text-sm">
                 <Phone size={18} className="text-cyan-400 flex-shrink-0" />
                 <span>+91 98765 43210</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Bus Timing */}
+          <div>
+            <h4 className="text-white font-semibold mb-6">Transportation</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-slate-400 text-sm">
+                <Bus size={18} className="text-cyan-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-slate-300">Main Campus → Satellite Campus</p>
+                  <p className="text-cyan-400 font-medium">8:30 AM</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-slate-400 text-sm">
+                <Bus size={18} className="text-purple-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-slate-300">Satellite Campus → Main Campus</p>
+                  <p className="text-purple-400 font-medium">3:00 PM</p>
+                </div>
+              </li>
+              <li className="flex items-center gap-3 text-slate-400 text-sm">
+                <Clock size={18} className="text-cyan-400 flex-shrink-0" />
+                <span className="text-xs">For registered students only</span>
               </li>
             </ul>
           </div>
