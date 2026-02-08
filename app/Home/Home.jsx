@@ -169,7 +169,7 @@ export default function Home() {
                   Registration Closes
                 </span>
               </div>
-              <CountdownTimer targetDate="2026-02-09T20:00:00" />
+              <CountdownTimer targetDate="2026-02-11T20:00:00" />
             </motion.div>
 
             {/* CTAs */}
