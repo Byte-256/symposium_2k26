@@ -66,10 +66,10 @@ export default function Sponsors() {
   ];
 
   const currentSponsors = [
-    {
-      name: "Thangamayil",
-      logo: "/thangamayil.webp",
-    },
+    // {
+    //   name: "Thangamayil",
+    //   logo: "/thangamayil.webp",
+    // },
     {
       name: "Gesto",
       logo: "/gesto.webp",
@@ -82,6 +82,10 @@ export default function Sponsors() {
     {
       name: "Ace",
       logo: "/ACE.webp",
+    },
+    {
+      name: "Sree Fabrics",
+      logo: "/sf.webp",
     },
   ];
 
