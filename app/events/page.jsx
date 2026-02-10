@@ -31,7 +31,7 @@ export default function Events() {
       duration: "2 Hours",
       teamSize: "2 Members",
       category: "Non-Technical",
-      link: "/treasure-hunt",
+      link: "/events/treasure-hunt",
     },
     {
       title: "Trace & Transform \n Debugging",
@@ -41,7 +41,7 @@ export default function Events() {
       duration: "3 Rounds",
       teamSize: "2 Members",
       category: "Technical",
-      link: "/debugging",
+      link: "/events/debugging",
     },
     {
       title: "The Golden Ratio \n Photography",
@@ -58,7 +58,7 @@ export default function Events() {
     {
       title: "The Neural Narrative \n Paper Presentation",
       description:
-        "Individual or Team of 2. Only one paper per team. Presentation: 5–10 mins, 6–10 slides (PPT only). Themes: AI, Cloud Computing, IoT, Cybersecurity, Quantum Computing, Big Data Analytics.",
+        "Individual or Team of 2. Only one paper per team. Presentation: 5-10 mins, 6-10 slides (PPT only). Themes: AI, Cloud Computing, IoT, Cybersecurity, Quantum Computing, Big Data Analytics.",
       icon: Presentation,
       duration: "5-10 Mins",
       teamSize: "1-2 Members",
