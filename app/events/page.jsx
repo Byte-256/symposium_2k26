@@ -31,6 +31,7 @@ export default function Events() {
       duration: "2 Hours",
       teamSize: "2 Members",
       category: "Non-Technical",
+      link: "/treasure-hunt",
     },
     {
       title: "Trace & Transform \n Debugging",
@@ -40,6 +41,7 @@ export default function Events() {
       duration: "3 Rounds",
       teamSize: "2 Members",
       category: "Technical",
+      link: "/debugging",
     },
     {
       title: "The Golden Ratio \n Photography",
@@ -50,16 +52,18 @@ export default function Events() {
       teamSize: "Individual",
       category: "Non-Technical",
       extraInfo:
-        "Submit: Name_Department_Year.jpg to frameparungajii@gmail.com | Contact: 9994118682, 97871 92215",
+        "Submit: Lot_Number.jpg to frameparungajii@gmail.com | Contact: 9994118682, 97871 92215",
+      link: "",
     },
     {
       title: "The Neural Narrative \n Paper Presentation",
       description:
-        "Present original research papers. IEEE format, 6-10 pages, plagiarism below 15%, 10-12 slides, PPT only.",
+        "Individual or Team of 2. Only one paper per team. Presentation: 5–10 mins, 6–10 slides (PPT only). Themes: AI, Cloud Computing, IoT, Cybersecurity, Quantum Computing, Big Data Analytics.",
       icon: Presentation,
       duration: "5-10 Mins",
       teamSize: "1-2 Members",
       category: "Technical",
+      link: "",
     },
     {
       title: "Vision Vault \n Connection",
@@ -69,6 +73,7 @@ export default function Events() {
       duration: "3 Rounds",
       teamSize: "2 Members",
       category: "Technical",
+      link: "",
     },
     {
       title: "Fusion Fiesta \n As You Like It",
@@ -78,6 +83,7 @@ export default function Events() {
       duration: "5-6 Minutes",
       teamSize: "Maximum 5 Members",
       category: "Non-Technical",
+      link: "", 
     },
   ];
 
