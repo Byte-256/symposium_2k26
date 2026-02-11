@@ -1,6 +1,7 @@
 "use client";
-import React, { use, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Presentation,
   Puzzle,
