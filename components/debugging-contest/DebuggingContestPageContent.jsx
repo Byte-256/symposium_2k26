@@ -13,13 +13,15 @@ import { ROUND_PASSWORD, ROUND3_FLAG } from './constants';
 import { CongratulationsScreen, TimeUpScreen } from './StatusScreens';
 
 const ROUND_DURATIONS = {
-  1: 60 * 10,
-  2: 60 * 15,
-  3: 60 * 20,
+  1: 60 * 30, // 30 minutes
+  2: 60 * 25, // 25 minutes
+  3: 60 * 20, // 20 minutes
 };
 
 export default function DebuggingContestPageContent() {
   const [currentRound, setCurrentRound] = useState(1);
+  const [roundStartTimes, setRoundStartTimes] = useState(() => ({ 1: Date.now() }));
+  const [roundCompletionTimes, setRoundCompletionTimes] = useState({});
 
   useEffect(() => {
     const handleBeforeUnload = (event) => {
@@ -33,17 +35,60 @@ export default function DebuggingContestPageContent() {
     };
   }, []);
 
-  const handleTimeUp = () => setCurrentRound('times_up');
-  const handleRound1Complete = () => setCurrentRound(2);
+  const handleTimeUp = () => {
+    const completionTime = Date.now();
+    setRoundCompletionTimes(prev => ({
+      ...prev,
+      [currentRound]: completionTime
+    }));
+    setCurrentRound('times_up');
+  };
+
+  const handleRound1Complete = () => {
+    const completionTime = Date.now();
+    setRoundCompletionTimes(prev => ({
+      ...prev,
+      [currentRound]: completionTime
+    }));
+    setRoundStartTimes(prev => ({
+      ...prev,
+      2: completionTime
+    }));
+    setCurrentRound(2);
+  };
+
   const handleRound2Complete = (password) => {
     if (password === ROUND_PASSWORD) {
+      const completionTime = Date.now();
+      setRoundCompletionTimes(prev => ({
+        ...prev,
+        [currentRound]: completionTime
+      }));
+      setRoundStartTimes(prev => ({
+        ...prev,
+        3: completionTime
+      }));
       setCurrentRound(3);
     }
   };
+
   const handleRound3Complete = (flag) => {
     if (flag === ROUND3_FLAG) {
+      const completionTime = Date.now();
+      setRoundCompletionTimes(prev => ({
+        ...prev,
+        [currentRound]: completionTime
+      }));
       setCurrentRound(4);
     }
+  };
+
+  const formatTimeTaken = (completionTime, startTime) => {
+    if (!completionTime || !startTime) return 'N/A';
+    const timeTaken = Math.floor((completionTime - startTime) / 1000);
+    const minutes = Math.floor(timeTaken / 60);
+    const seconds = timeTaken % 60;
+    return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
   };
 
   const roundMetaStyle = useMemo(() => {
@@ -73,9 +118,9 @@ export default function DebuggingContestPageContent() {
       return <Round3CppCtf onComplete={handleRound3Complete} />;
     }
     if (currentRound === 4) {
-      return <CongratulationsScreen />;
+      return <CongratulationsScreen completionTimes={roundCompletionTimes} startTimes={roundStartTimes} />;
     }
-    return <TimeUpScreen />;
+    return <TimeUpScreen completionTimes={roundCompletionTimes} startTimes={roundStartTimes} />;
   };
 
   return (
@@ -95,7 +140,11 @@ export default function DebuggingContestPageContent() {
               Debugging Contest
             </h1>
             {currentRound !== 4 && currentRound !== 'times_up' && (
-              <CountdownTimer duration={ROUND_DURATIONS[currentRound]} onTimeUp={handleTimeUp} />
+              <CountdownTimer
+                duration={ROUND_DURATIONS[currentRound]}
+                startTime={roundStartTimes[currentRound]}
+                onTimeUp={handleTimeUp}
+              />
             )}
           </div>
 
@@ -110,9 +159,16 @@ export default function DebuggingContestPageContent() {
                     : currentRound}
               </span>
               {currentRound !== 'times_up' && currentRound !== 4 && (
+                 <>
                 <span className="text-slate-500">
                   {Math.floor(ROUND_DURATIONS[currentRound] / 60)} minutes available
                 </span>
+                   {roundCompletionTimes[currentRound - 1] && (
+                     <span className="text-green-400">
+                       Round {currentRound - 1} completed in {formatTimeTaken(roundCompletionTimes[currentRound - 1], roundStartTimes[currentRound - 1])}
+                     </span>
+                   )}
+                 </>
               )}
             </div>
           </div>
