@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useCountdownEnded } from "@/hooks/useCountdownEnded";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const countdownEnded = useCountdownEnded();
 
   const navLinks = [
     { name: "Home", page: "/" },
@@ -43,14 +45,12 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <a
-                href="https://forms.gle/m1GdyZuahE68sDzu9"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={countdownEnded? "/registration": "https://forms.gle/m1GdyZuahE68sDzu9"}
                 className="ml-4 px-6 py-2.5 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Register Now
-              </a>
+              </Link>
             </div>
 
             {/* Mobile menu button */}
@@ -84,14 +84,12 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-              <a
-                href="https://forms.gle/m1GdyZuahE68sDzu9"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/registration"
                 className="block mt-4 px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-center font-medium rounded-full"
               >
                 Register Now
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

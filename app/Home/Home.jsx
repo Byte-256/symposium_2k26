@@ -18,8 +18,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CountdownTimer from "@/components/CountdownTimer";
 import Image from "next/image";
+import { useCountdownEnded } from "@/hooks/useCountdownEnded";
 
 export default function Home() {
+  const countdownEnded = useCountdownEnded();
   const features = [
     {
       icon: Code2,
@@ -181,18 +183,31 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              <a
-                href="https://forms.gle/m1GdyZuahE68sDzu9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Register Now
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </a>
+              {!countdownEnded ? (
+                <a
+                  href="https://forms.gle/m1GdyZuahE68sDzu9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  Register Now
+                  <ArrowRight
+                    size={18}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </a>
+              ) : (
+                <Link
+                  href="/registration"
+                  className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  Register Now
+                  <ArrowRight
+                    size={18}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+              )}
               <Link
                 href={"events"}
                 className="px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white font-medium hover:bg-white/10 transition-all duration-300"
@@ -438,15 +453,25 @@ export default function Home() {
               Don&apos; miss this opportunity to learn, compete, and connect
               with fellow data enthusiasts from across the region.
             </p>
-            <a
-              href="https://forms.gle/m1GdyZuahE68sDzu9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
-            >
-              Register Now
-              <ArrowRight size={20} />
-            </a>
+            {!countdownEnded ? (
+              <a
+                href="https://forms.gle/m1GdyZuahE68sDzu9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
+              >
+                Register Now
+                <ArrowRight size={20} />
+              </a>
+            ) : (
+              <Link
+                href="/registration"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
+              >
+                Register Now
+                <ArrowRight size={20} />
+              </Link>
+            )}
           </motion.div>
         </div>
       </section>

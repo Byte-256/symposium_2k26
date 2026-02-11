@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Presentation,
@@ -16,10 +16,11 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import EventCard from "@/components/EventCard";
+import { useCountdownEnded } from "@/hooks/useCountdownEnded";
 
 export default function Events() {
   const [activeCategory, setActiveCategory] = useState("All");
-
+    const countdownEnded = useCountdownEnded();
   const categories = ["All", "Technical", "Non-Technical"];
 
   const events = [
@@ -196,15 +197,13 @@ export default function Events() {
           <p className="text-slate-400 mb-8">
             Register now and secure your spot in these exciting events!
           </p>
-          <a
-            href="https://forms.gle/m1GdyZuahE68sDzu9"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={countdownEnded ? "/registration" : "https://forms.gle/m1GdyZuahE68sDzu9"}
             className="inline-flex items-center gap-2 px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300"
           >
             Register for Events
             <ArrowRight size={18} />
-          </a>
+          </Link>
         </div>
       </section>
 

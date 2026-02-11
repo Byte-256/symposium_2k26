@@ -18,8 +18,11 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { useCountdownEnded } from "@/hooks/useCountdownEnded";
+
 
 export default function About() {
+  const countdownEnded = useCountdownEnded();
   const teamMembers = [
     {
       name: "Faculty Coordinator",
@@ -328,15 +331,13 @@ export default function About() {
       {/* CTA */}
       <section className="relative z-10 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <a
-            href="https://forms.gle/m1GdyZuahE68sDzu9"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={countdownEnded ? "/registration" : "https://forms.gle/m1GdyZuahE68sDzu9"}
             className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
           >
             Register for Data Vaganza 2K26
             <ArrowRight size={20} />
-          </a>
+          </Link>
         </div>
       </section>
 
