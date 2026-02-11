@@ -173,7 +173,7 @@ export default function Home() {
                   Registration Closes
                 </span>
               </div>
-              <CountdownTimer targetDate="2026-02-11T20:00:00" />
+              <CountdownTimer targetDate="2026-02-11T23:59:00" />
             </motion.div>
 
             {/* CTAs */}
@@ -183,31 +183,20 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row justify-center gap-4"
             >
-              {!countdownEnded ? (
-                <a
-                  href="https://forms.gle/m1GdyZuahE68sDzu9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Register Now
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </a>
-              ) : (
-                <Link
-                  href="/registration"
-                  className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  Register Now
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </Link>
-              )}
+
+              <a
+                href="https://forms.gle/m1GdyZuahE68sDzu9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Register Now
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </a>
+
               <Link
                 href={"events"}
                 className="px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white font-medium hover:bg-white/10 transition-all duration-300"
@@ -453,25 +442,16 @@ export default function Home() {
               Don&apos; miss this opportunity to learn, compete, and connect
               with fellow data enthusiasts from across the region.
             </p>
-            {!countdownEnded ? (
-              <a
-                href="https://forms.gle/m1GdyZuahE68sDzu9"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
-              >
-                Register Now
-                <ArrowRight size={20} />
-              </a>
-            ) : (
-              <Link
-                href="/registration"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
-              >
-                Register Now
-                <ArrowRight size={20} />
-              </Link>
-            )}
+
+            <a
+              href="https://forms.gle/m1GdyZuahE68sDzu9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"
+            >
+              Register Now
+              <ArrowRight size={20} />
+            </a>
           </motion.div>
         </div>
       </section>

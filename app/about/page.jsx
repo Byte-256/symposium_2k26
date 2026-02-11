@@ -18,6 +18,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import { useCountdownEnded } from "@/hooks/useCountdownEnded";
 
 

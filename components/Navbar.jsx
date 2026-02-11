@@ -46,7 +46,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href={countdownEnded? "/registration": "https://forms.gle/m1GdyZuahE68sDzu9"}
+                href={"https://forms.gle/m1GdyZuahE68sDzu9"}
                 className="ml-4 px-6 py-2.5 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               >
                 Register Now
