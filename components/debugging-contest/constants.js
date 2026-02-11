@@ -25,26 +25,23 @@ if __name__ == "__main__":
   main()
 `;
 
-export const BUGGY_CPP_CODE = `
-#include <iostream>
-#include <string>
-#include <vector>
+export const BUGGY_C_CODE = `
+#include <stdio.h>
+#include <string.h>
 
-// The flag is hidden, you need to fix the logic to print it.
-// The correct flag is "FLAG{DeBuGgInG_Is_FuN}"
-void print_flag() {
-    std::string part1 = "FLAG{";
-    std::string part2 = "DeBuGgInG";
-    std::string part3 = "_Is_";
-    std::string part4 = "FuN";
-    std::string part5 = "}";
-
-    // There is a bug in the following line.
-    std::cout << part1 << part2 << part4 << part3 << part5 << std::endl;
-}
-
+/* The correct flag is: FLAG{DeBuGgInG_Is_FuN} */
 int main() {
-    print_flag();
+    char part1[] = "FLAG{";
+    char part2[] = "DeBuGgInG";
+    char part3[] = "_Is_";
+    char part4[] = "FuN";
+    char part5[] = "}";
+    char flag[64];
+
+    /* Bug: wrong concatenation order */
+    sprintf(flag, "%s%s%s%s%s", part1, part2, part4, part3, part5);
+
+    printf("%s\\n", flag);
     return 0;
 }
 `;
