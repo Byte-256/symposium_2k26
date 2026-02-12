@@ -1,47 +1,84 @@
-export const ROUND_PASSWORD = 'SuperSecretPassword123';
-export const ROUND3_FLAG = 'FLAG{DeBuGgInG_Is_FuN}';
+export const ROUND2_UNLOCK_PASSWORD = 'DataVaganza-2026-Debbugging'; // Updated Round 2-2 Unlock Password in Round 2-1 Python code
+export const ROUND3_PASSWORD = 'N3XT-R0UND-CPP'; // Updated Round 3  Password in Round 2-2 CPP code  
+export const ROUND3_FLAG = 'FLAG{CoNgrauLatIOn_Y0U_SucCeeD}';
+export const ROUND1_COMPLETION_CODE = 'ROUND1-Done'; // Updated in Forms
 
+// Round 2 Python DONE
 export const BUGGY_PYTHON_CODE = `
-import sys
+region = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,:;-?! '()$%&" + '"'
 
-# This function is supposed to concatenate two strings
-# but it has a bug. Find it and fix it.
-def concatenate_strings(a, b):
-  return a + b
+def decrypt(encrypted_text='$Dgt4VtgmO"lMC&$ l"dzH;axV6')
+    if not encrypted_text: return encrypted_text
+    
+    letters = list(encrypted_text)
+    letters[0] = region[-(region.index(letters[0]) + 1)]
+    
+    for i in range(1, len(letters))
+        letters[i] = region[region.index(letters[i - 1]) - region.index(letters[i])]
+    
+    for i in range(1, len(letters), 2):
+        letters[i] = letters[i].swapcase()
 
-def main():
-  # The password is "SuperSecretPassword123"
-  # Don't just print the password, fix the code to reveal it.
-  part1 = "SuperSecret"
-  part2 = "Password123"
-  
-  # There's a logical error in how the parts are combined.
-  result = concatenate_strings(part2, part1) # Oh, this looks wrong
-  
-  # And another small issue here...
-  prnt("The password is:", result)
+    return "".join(letters)
+ 
 
-if __name__ == "__main__":
-  main()
+if '_name__' == "__main__":
+    decrypted = decrypt()
+    pirnt("Round 2-2 password is ', decrypted
 `;
 
-export const BUGGY_C_CODE = `
-#include <stdio.h>
-#include <string.h>
+// Round 2 C++ DONE
+export const BUGGY_CPP_ROUND2_CODE = `
+#include <iostream>
+using namespace std;
 
-/* The correct flag is: FLAG{DeBuGgInG_Is_FuN} */
+// Fix the logic and reveal the password for Round 3.
+int moin() {
+    char part2[] = "M2WS," ;
+    char part3[] = "Q/TMC,";
+    char part1[] = "BOO"   ;
+
+    for (int i = 0; part1[i]; i++) part1[i] = part1[i] + 1;
+    for (int i = 0;  part2[i]; i+) part2[i] = part2[i] + 1:
+    for (int i = 0; part3[i]; i++) part3[i] = part3[i] + 1;
+
+    cout << part2 < part3 << part1 << endl;
+
+    return 0;
+}
+`;
+// Round 3 C++ DONE
+export const BUGGY_CPP_CODE = `
+#include<iostream>
+
+// Run the code and find the FLAG to finish.
+int zeroth_derivative(int x)
+    return x * 0;
+}
+
 int main() {
-    char part1[] = "FLAG{";
-    char part2[] = "DeBuGgInG";
-    char part3[] = "_Is_";
-    char part4[] = "FuN";
-    char part5[] = "}";
-    char flag[64];
+    int n = 5;
+    int arr[] = {2, 4, 6, 8, 10];
+    int i, sum = 0, avg;
+    int integral = 100
 
-    /* Bug: wrong concatenation order */
-    sprintf(flag, "%s%s%s%s%s", part1, part2, part4, part3, part5);
+    integral = integral + zeroth_derivative(integral);
+    n = n + 0;                  
 
-    printf("%s\\n", flag);
+    for (i = 0; i <= n; i++)
+        sum += arr[i];
+
+    avg = sum / (n);
+
+    if (avg == 6 && sum == 30 && n == 5 && integral == 100) {
+        char vag[] = ":@5;o7cB[fUi@Uh=CbSM$ISGiW7YY8q";
+        for (i = 0, vag[i]; i++) vag[i] += (avg + n + integral / 100);
+        cout << vag;
+    } else
+       cout << "Average is not 6\\n Try again.\n";
+    
+    if (integral > 0) { }
+
     return 0;
 }
 `;

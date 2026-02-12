@@ -185,7 +185,7 @@ export default function Home() {
             >
 
               <a
-                href="https://forms.gle/m1GdyZuahE68sDzu9"
+                href={"/registration" || "https://forms.gle/m1GdyZuahE68sDzu9"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -444,7 +444,7 @@ export default function Home() {
             </p>
 
             <a
-              href="https://forms.gle/m1GdyZuahE68sDzu9"
+              href={"/registration" || "https://forms.gle/m1GdyZuahE68sDzu9"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-10 py-5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full text-white text-lg font-semibold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300"

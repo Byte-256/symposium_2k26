@@ -1,39 +1,43 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export default function CountdownTimer({ duration, startTime, onTimeUp }) {
-  const [timeLeft, setTimeLeft] = useState(duration);
-  const [totalTime, setTotalTime] = useState(duration);
+export default function CountdownTimer({ duration, startTime, onTimeUp, onTick }) {
+  const calculateRemaining = useCallback(() => {
+    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    return Math.max(0, duration - elapsed);
+  }, [duration, startTime]);
+
+  const [timeLeft, setTimeLeft] = useState(() => calculateRemaining());
 
   useEffect(() => {
-    const elapsed = Math.floor((Date.now() - startTime) / 1000);
-    const remaining = Math.max(0, duration - elapsed);
-    setTimeLeft(remaining);
-    setTotalTime(duration);
-
-    if (remaining <= 0) {
-      onTimeUp();
-      return;
-    }
+    const immediateUpdateId = setTimeout(() => {
+      const remaining = calculateRemaining();
+      setTimeLeft(remaining);
+      onTick?.(remaining);
+      if (remaining <= 0) onTimeUp();
+    }, 0);
 
     const intervalId = setInterval(() => {
-      const newElapsed = Math.floor((Date.now() - startTime) / 1000);
-      const newRemaining = Math.max(0, duration - newElapsed);
+      const newRemaining = calculateRemaining();
       setTimeLeft(newRemaining);
-      
+      onTick?.(newRemaining);
+
       if (newRemaining <= 0) {
         clearInterval(intervalId);
         onTimeUp();
       }
     }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, [duration, startTime, onTimeUp]);
+    return () => {
+      clearTimeout(immediateUpdateId);
+      clearInterval(intervalId);
+    };
+  }, [calculateRemaining, onTimeUp, onTick]);
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
-  const timeTaken = totalTime - timeLeft;
+  const timeTaken = duration - timeLeft;
   const takenMinutes = Math.floor(timeTaken / 60);
   const takenSeconds = timeTaken % 60;
 
