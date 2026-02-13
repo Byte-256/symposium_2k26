@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
-export default function CountdownTimer({ duration, startTime, onTimeUp, onTick }) {
+export default function CountdownTimer({ duration, displayDuration = duration, startTime, onTimeUp, onTick }) {
   const calculateRemaining = useCallback(() => {
     const elapsed = Math.floor((Date.now() - startTime) / 1000);
     return Math.max(0, duration - elapsed);
@@ -35,9 +35,10 @@ export default function CountdownTimer({ duration, startTime, onTimeUp, onTick }
     };
   }, [calculateRemaining, onTimeUp, onTick]);
 
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
   const timeTaken = duration - timeLeft;
+  const visibleTimeLeft = Math.max(0, displayDuration - timeTaken);
+  const visibleMinutes = Math.floor(visibleTimeLeft / 60);
+  const visibleSeconds = visibleTimeLeft % 60;
   const takenMinutes = Math.floor(timeTaken / 60);
   const takenSeconds = timeTaken % 60;
 
@@ -47,7 +48,7 @@ export default function CountdownTimer({ duration, startTime, onTimeUp, onTick }
         <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-red-500"></span>
         <span className="tracking-wide text-slate-400">Time Left</span>
         <span className="font-mono text-lg font-semibold text-red-400 sm:text-xl">
-          {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+          {String(visibleMinutes).padStart(2, '0')}:{String(visibleSeconds).padStart(2, '0')}
         </span>
       </div>
       <div className="text-xs text-slate-500">
